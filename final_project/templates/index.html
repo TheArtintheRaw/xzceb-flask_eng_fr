@@ -18,4 +18,18 @@
         </div>
         </div>
   </div>
+  <script>
+    function englishToFrench() {
+        // get the text to translate from the input field
+        let textToTranslate = document.getElementById('inputFieldId').value;
+    
+        // send a GET request to the /englishToFrench endpoint
+        fetch('/englishToFrench?textToTranslate=' + encodeURIComponent(textToTranslate))
+            .then(response => response.text())
+            .then(translatedText => {
+                // do something with the translated text
+                console.log(translatedText);
+            });
+    }
+    </script>
 </html>
