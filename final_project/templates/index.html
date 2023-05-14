@@ -24,7 +24,20 @@
         let textToTranslate = document.getElementById('textToTranslate').value;
     
         // send a GET request to the /englishToFrench endpoint
-        fetch('/englishToFrench?textToTranslate=' + encodeURIComponent(textToTranslate))
+        fetch('/translator?textToTranslate=' + encodeURIComponent(textToTranslate))
+            .then(response => response.text())
+            .then(translatedText => {
+                // do something with the translated text
+                console.log(translatedText);
+            });
+    }
+
+    function frenchToEnglish() {
+        // get the text to translate from the input field
+        let textToTranslate = document.getElementById('textToTranslate').value;
+    
+        // send a GET request to the /englishToFrench endpoint
+        fetch('/translator?textToTranslate=' + encodeURIComponent(textToTranslate))
             .then(response => response.text())
             .then(translatedText => {
                 // do something with the translated text
