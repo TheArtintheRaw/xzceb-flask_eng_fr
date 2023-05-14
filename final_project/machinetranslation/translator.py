@@ -10,7 +10,7 @@ from ibm_cloud_sdk_core.authenticators import IAMAuthenticator
 # Load the environment variables from the .env file
 load_dotenv()
 
-# Get the API key and URL from the environment variables
+# Get the API key and URL from the environment variables.
 apikey = os.getenv('apikey')
 url = os.getenv('url')
 
