@@ -24,7 +24,7 @@
         let textToTranslate = document.getElementById('textToTranslate').value;
     
         // send a GET request to the /englishToFrench endpoint
-        fetch('/english_to_french?english_text=' + encodeURIComponent(textToTranslate))
+        fetch('/englishToFrench?english_text=' + encodeURIComponent(textToTranslate))
             .then(response => response.text())
             .then(translatedText => {
                 // do something with the translated text
@@ -37,7 +37,7 @@
         let textToTranslate = document.getElementById('textToTranslate').value;
     
         // send a GET request to the /englishToFrench endpoint
-        fetch('/french_to_english?french_text=' + encodeURIComponent(textToTranslate))
+        fetch('/frenchToEnglish?french_text=' + encodeURIComponent(textToTranslate))
             .then(response => response.text())
             .then(translatedText => {
                 // do something with the translated text
