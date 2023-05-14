@@ -21,7 +21,7 @@
   <script>
     function englishToFrench() {
         // get the text to translate from the input field
-        let textToTranslate = document.getElementById('inputFieldId').value;
+        let textToTranslate = document.getElementById('textToTranslate').value;
     
         // send a GET request to the /englishToFrench endpoint
         fetch('/englishToFrench?textToTranslate=' + encodeURIComponent(textToTranslate))
