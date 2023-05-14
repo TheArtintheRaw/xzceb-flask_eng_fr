@@ -4,14 +4,14 @@ import json
 
 app = Flask("Web Translator")
 
-@app.route('/englishToFrench', methods=['POST'])
+@app.route('/englishToFrench', methods=['GET', 'POST'])
 def english_to_french():
     text_to_translate = request.args.get('textToTranslate')
     english_text = request.form.get(text_to_translate)  # replace 'text' with the actual name of your input field
     french_text = translator.english_to_french(english_text)
     return french_text
 
-@app.route('/frenchToEnglish', methods=['POST'])
+@app.route('/frenchToEnglish', methods=['GET', 'POST'])
 def french_to_english():
     text_to_translate = request.args.get('textToTranslate')
     french_text = request.form.get(text_to_translate)  # replace 'text' with the actual name of your input field
