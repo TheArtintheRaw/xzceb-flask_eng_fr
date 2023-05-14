@@ -14,7 +14,7 @@
         </div>
     
         <div style="padding: 25px 25px 25px 25px;">
-            <h3 id="translated_text"></h3>
+            <h3 id="translatedText"></h3>
         </div>
         </div>
   </div>
@@ -28,8 +28,7 @@
             .then(response => response.text())
             .then(translatedText => {
                 // do something with the translated text
-                console.log(translatedText);
-                return <h3>{translatedText}</h3>
+                document.getElementById('translatedText').innerText = translatedText;
             });
     }
 
@@ -41,8 +40,7 @@
         fetch('/frenchToEnglish?french_text=' + encodeURIComponent(textToTranslate))
             .then(response => response.text())
             .then(translatedText => {
-                // do something with the translated text
-                console.log(translatedText);
+                document.getElementById('translatedText').innerText = translatedText;
             });
     }
     </script>
